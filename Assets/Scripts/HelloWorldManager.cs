@@ -12,6 +12,7 @@ namespace HelloWorld
         Button clientButton;
         Button serverButton;
         Button moveButton;
+        Button viewProposals;
         Button createProposal;
         Label statusLabel;
 
@@ -25,6 +26,8 @@ namespace HelloWorld
             serverButton = CreateButton("ServerButton", "Server");
             moveButton = CreateButton("MoveButton", "Move");
             createProposal = CreateButton("CreateProposal", "Create New Proposal");
+            viewProposals = CreateButton("viewProposals", "View All Proposals");
+
             statusLabel = CreateLabel("StatusLabel", "Not Connected");
             
 		    rootVisualElement.Clear();
@@ -40,6 +43,8 @@ namespace HelloWorld
             serverButton.clicked += OnServerButtonClicked;
             moveButton.clicked += SubmitNewPosition;
             createProposal.clicked += onCreateProposalClicked;
+            viewProposals.clicked += onViewProposalsClicked;
+
         }
 
         void Update()
@@ -62,6 +67,8 @@ namespace HelloWorld
         void OnServerButtonClicked() => NetworkManager.Singleton.StartServer();
 
         void onCreateProposalClicked() => NetworkManager.Singleton.transform.Translate(Vector3.forward * 10);
+
+        void onViewProposalsClicked() => NetworkManager.Singleton.transform.Translate(Vector3.forward * 10);
 
         // Disclaimer: This is not the recommended way to create and stylize the UI elements, it is only utilized for the sake of simplicity.
         // The recommended way is to use UXML and USS. Please see this link for more information: https://docs.unity3d.com/Manual/UIE-USS.html
