@@ -1,6 +1,8 @@
 using UnityEngine;
+using System;
+using Unity.Netcode;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
 
     private float speed = 20.0f;
