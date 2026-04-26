@@ -36,6 +36,7 @@ namespace HelloWorld
             rootVisualElement.Add(serverButton);
             rootVisualElement.Add(moveButton);
             rootVisualElement.Add(createProposal);
+            rootVisualElement.Add(viewProposals);
             rootVisualElement.Add(statusLabel);
             
             hostButton.clicked += OnHostButtonClicked;
