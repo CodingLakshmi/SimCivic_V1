@@ -1,3 +1,5 @@
+using System;
+using Unity.Netcode;
 using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
@@ -22,7 +24,9 @@ public class FollowPlayer : MonoBehaviour
        horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+        transform.Translate(Vector3.forward * (Time.deltaTime * speed * forwardInput ));
+        
+        //* (float) Math.Sin(horizontalInput)
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
     }
 }

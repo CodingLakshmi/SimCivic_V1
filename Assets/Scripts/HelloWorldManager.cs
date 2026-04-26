@@ -110,6 +110,7 @@ namespace HelloWorld
             hostButton.style.display = state ? DisplayStyle.Flex : DisplayStyle.None;
             clientButton.style.display = state ? DisplayStyle.Flex : DisplayStyle.None;
             serverButton.style.display = state ? DisplayStyle.Flex : DisplayStyle.None;
+            
         }
 
         void SetMoveButton(bool state)
